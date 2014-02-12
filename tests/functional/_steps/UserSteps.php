@@ -6,7 +6,7 @@ class UserSteps extends \TestGuy
     function amAdmin()
     {
         $I = $this;
-        $id = $I->haveRecord('Phosphorum\Models\Users', ['name' => 'Phalcon']);
+        $id = $I->haveRecord('Phosphorum\Models\Users', array('name' => 'Phalcon'));
 		$I->haveInSession('identity', $id);
 		$I->haveInSession('identity-name', 'Phalcon');
 		return $id;
